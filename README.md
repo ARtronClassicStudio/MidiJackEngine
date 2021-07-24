@@ -2,15 +2,15 @@
 MIDI Jack Engine is a MIDI input plugin for Unity.
 
 # System Requirements
-Unity 2020.3.14f1 (LST)
+Unity 2020.3.14f1 (LTS)
 
 Only for Windows
 # Installation
-Download and import MidiJack.unitypackage into your project. That’s it!
+Download and import [MIDIJackEngine.unitypackage](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/MIDIJackEngine.unitypackage) into your project.
 
 See the troubleshooting topics if you encounter any problems.
 
-API Reference
+# API Reference
 The basic functions of MIDI Jack are provided in the MidiMaster class.
 
 The channel arguments in the following functions can be omitted. In that case, the functions return the values in the All-Channel slot, which stores mixed status of all active channels.
