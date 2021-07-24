@@ -1,12 +1,11 @@
 # MIDI Jack Engine
-MIDI Jack is a MIDI input plugin for Unity.
+MIDI Jack Engine is a MIDI input plugin for Unity.
 
-sample
+# System Requirements
+Unity 2020.3.14f1 (LST)
 
-System Requirements
-Unity 5
-Windows or Mac OS X
-Installation
+Only for Windows
+# Installation
 Download and import MidiJack.unitypackage into your project. That’s it!
 
 See the troubleshooting topics if you encounter any problems.
