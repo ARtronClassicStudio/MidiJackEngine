@@ -10,36 +10,43 @@ Download and import [MIDIJackEngine.unitypackage](https://github.com/ARtronClass
 
 See the troubleshooting topics if you encounter any problems.
 
+# What's new:
+1. The structure of the code has been completely changed, something is simplified, something remains as it is.
+2. ```MidiMaster``` has now been changed to ```InputMIDI```, you no longer need to add the MidiJack namespace. ```InputMIDI``` Added to the namespace in the UnityEngine so that it will appear next to ```Input```.
+3. Added a couple more APIs
+4. The MIDI Monitor window has been completely redesigned. 
+
+
 # API Reference
-The basic functions of MIDI Jack are provided in the MidiMaster class.
+The basic functions of MIDI Jack Engine are provided in the InputMIDI class.
 
 The channel arguments in the following functions can be omitted. In that case, the functions return the values in the All-Channel slot, which stores mixed status of all active channels.
-
-MidiMaster.GetKey (channel, noteNumber)
-
+```C#
+InputMIDI.GetKey (channel, noteNumber)
+```
 Returns the velocity value while the key is pressed, or zero while the key is released. The value ranges from 0.0 (note-off) to 1.0 (maximum velocity).
 
-MidiMaster.GetKeyDown (channel, noteNumber)
+InputMIDI.GetKeyDown (channel, noteNumber)
 
 Returns true during the frame the user starts pressing down the key.
 
-MidiMaster.GetKeyUp (channel, noteNumber)
+InputMIDI.GetKeyUp (channel, noteNumber)
 
 Returns true during the frame the user releases the key.
 
-MidiMaster.GetKnob (channel, knobNumber, defaultValue)
+InputMIDI.GetKnob (channel, knobNumber, defaultValue)
 
 Returns the controller value (CC). The value ranges from 0.0 to 1.0.
 
-MidiMaster.GetKnobNumbers (channel)
+InputMIDI.GetKnobNumbers (channel)
 
 Returns the list of active controllers.
 
 There are also delegates for the each type of MIDI event.
 
-MidiMaster.noteOnDelegate (channel, noteNumber, velocity)
-MidiMaster.noteOffDelegate (channel, noteNumber)
-MidiMaster.knobDelegate (channel, knobNumber, konbValue)
+InputMIDI.noteOnDelegate (channel, noteNumber, velocity)
+InputMIDI.noteOffDelegate (channel, noteNumber)
+InputMIDI.knobDelegate (channel, knobNumber, konbValue)
 MIDI Monitor Window
 MIDI Jack provides the MIDI Monitor window, which shows the list of active devices and incoming MIDI messages.
 
