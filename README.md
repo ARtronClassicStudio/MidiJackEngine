@@ -1,5 +1,5 @@
 # MIDI Jack Engine
-MIDI Jack Engine - это усовершенствованный плагин ввода MIDI для Unity 2020.
+MIDI Jack Engine is a MIDI input plugin upgrade for Unity 2020.
 Since the author stopped updating this plugin, I decided to continue updating it.
 Many thanks to [Keijiro Takahashi](https://github.com/keijiro) for permission to update this plugin for newer versions of Unity.
 You can find the old project [here](https://github.com/keijiro/MidiJack)
