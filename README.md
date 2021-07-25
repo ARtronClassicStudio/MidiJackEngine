@@ -3,7 +3,7 @@ MIDI Jack Engine is a MIDI input plugin for Unity.
 
 Many thanks to [Keijiro Takahashi](https://github.com/keijiro) for permission to update this plugin for newer versions of Unity.
 
-![](view2.gif)
+![](Resource/view2.gif)
 
 # System Requirements:
 Unity 2020.3.14f1 (LTS)
@@ -32,7 +32,7 @@ If your project is on a regular [Download](https://github.com/ARtronClassicStudi
 2. ```MidiMaster``` has now been changed to ```InputMIDI```, you no longer need to add the MidiJack namespace. ```InputMIDI``` Added to the namespace in the UnityEngine so that it will appear next to ```Input```.
 3. the ```MidiJack``` namespace has been changed to ```UnityEngine.MIDIJackEngine```, now other classes are there besides InputMIDI.
 4. Added a couple more APIs.
-5. The MIDI Monitor window has been completely redesigned. ![](view.gif)
+5. The MIDI Monitor window has been completely redesigned. ![](Resource/view.gif)
 
 
 # API Reference:
