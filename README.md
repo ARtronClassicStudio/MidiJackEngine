@@ -27,6 +27,8 @@ If your project is on a regular [Download](https://github.com/ARtronClassicStudi
 4. Added a couple more APIs.
 5. The MIDI Monitor window has been completely redesigned. ![](Resource/view.gif)
 The MIDI Monitor window is available from the menu ```Window > MIDI Jack Debug```
+6. Added event script, you can find it here `Add Component > MIDI Jack Engine > MIDI Event` ![](Resource/view2.PNG)
+
 
 # Minuses:
 Since I do not have a Mac, and I have no way to update the libraries for the Mac and build it, so I had to cut out the support for the Mac, but if it appears, then in the next update I will add support.
