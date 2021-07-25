@@ -50,9 +50,11 @@ Since I don't have a Midi keyboard, I used android instead for checks.
 ![](Resource/1.jpg)
   
 4. Go to the application and click on the output icon and select your device:
- 
+
+![](Resource/2.jpg)
 ![](Resource/3.jpg)
  
+5. Ready!
 </details>
 
 # API Reference:
@@ -63,28 +65,43 @@ The channel arguments in the following functions can be omitted. In that case, t
 InputMIDI.GetKey (channel, noteNumber)
 ```
 Returns the velocity value while the key is pressed, or zero while the key is released. The value ranges from 0.0 (note-off) to 1.0 (maximum velocity).
-
+```C#
 InputMIDI.GetKeyDown (channel, noteNumber)
-
+```
 Returns true during the frame the user starts pressing down the key.
-
+```C#
 InputMIDI.GetKeyUp (channel, noteNumber)
-
+```
 Returns true during the frame the user releases the key.
-
+```C#
 InputMIDI.GetKnob (channel, knobNumber, defaultValue)
-
+```
 Returns the controller value (CC). The value ranges from 0.0 to 1.0.
-
+```C#
 InputMIDI.GetKnobNumbers (channel)
-
+```
 Returns the list of active controllers.
 
 There are also delegates for the each type of MIDI event.
+```C#
+InputMIDI.NoteOnDelegate (channel, noteNumber, velocity)
+InputMIDI.NoteOffDelegate (channel, noteNumber)
+InputMIDI.KnobDelegate (channel, knobNumber, konbValue)
+```
+Occurs when the user has pressed any button.
+```C#
+InputMIDI.AnyKey()
+```
+Returns any value when the button is pressed.
+```C#
+InputMIDI.AnyKeyInt()
+```
+same as ```InputMIDI.GetKey()``` only for checks ```if```
+```C#
+InputMIDI.GetKeyBool()
+```
 
-InputMIDI.noteOnDelegate (channel, noteNumber, velocity)
-InputMIDI.noteOffDelegate (channel, noteNumber)
-InputMIDI.knobDelegate (channel, knobNumber, konbValue)
+
 MIDI Monitor Window
 MIDI Jack provides the MIDI Monitor window, which shows the list of active devices and incoming MIDI messages.
 
