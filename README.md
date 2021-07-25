@@ -26,7 +26,7 @@ If your project is on a regular [Download](https://github.com/ARtronClassicStudi
 3. the ```MidiJack``` namespace has been changed to ```UnityEngine.MIDIJackEngine```, now other classes are there besides InputMIDI.
 4. Added a couple more APIs.
 5. The MIDI Monitor window has been completely redesigned. ![](Resource/view.gif)
-
+The MIDI Monitor window is available from the menu ```Window > MIDI Jack Debug```
 
 # Minuses:
 Since I do not have a Mac, and I have no way to update the libraries for the Mac and build it, so I had to cut out the support for the Mac, but if it appears, then in the next update I will add support.
@@ -100,16 +100,3 @@ same as ```InputMIDI.GetKey()``` only for checks ```if```
 ```C#
 InputMIDI.GetKeyBool()
 ```
-
-
-MIDI Monitor Window
-MIDI Jack provides the MIDI Monitor window, which shows the list of active devices and incoming MIDI messages.
-
-monitor
-
-The MIDI Monitor window is available from the menu Window -> MIDI Jack.
-
-Current Limitations
-Currently MIDI Jack only supports Windows and OS X. No iOS support yet.
-Only supports note and CC messages. No support for program changes nor SysEx.
-The MIDI Jack plugin always tries to capture all available MIDI devices. On Windows this behavior may conflict with other MIDI applications.
