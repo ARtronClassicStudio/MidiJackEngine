@@ -1,5 +1,7 @@
 # MIDI Jack Engine
 MIDI Jack Engine is a MIDI input plugin for Unity.
+
+[Keijiro Takahashi](https://github.com/keijiro)
 ![](view2.gif)
 
 # System Requirements
