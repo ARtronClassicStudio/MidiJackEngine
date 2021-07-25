@@ -1,15 +1,21 @@
 # MIDI Jack Engine
 MIDI Jack Engine is a MIDI input plugin for Unity.
 
-[Keijiro Takahashi](https://github.com/keijiro)
+Many thanks to [Keijiro Takahashi](https://github.com/keijiro) for permission to update this plugin for newer versions of Unity.
+
 ![](view2.gif)
 
-# System Requirements
+# System Requirements:
 Unity 2020.3.14f1 (LTS)
 
 Only for Windows
-# Installation
+# Installation:
 Download and import [MIDIJackEngine.unitypackage](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/MIDIJackEngine.unitypackage) into your project.
+
+if you have any questions, write to Issues.
+
+# Minuses:
+Since I do not have a Mac, and I have no way to update the libraries for the Mac and build it, so I had to cut out the support for the Mac, but if it appears, then in the next update I will add support.
 
 # Examples:
 If your project is on Universal Render Pipeline [Download](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/ForUniversalRenderPipeline.unitypackage)
@@ -17,17 +23,15 @@ If your project is on Universal Render Pipeline [Download](https://github.com/AR
 If your project is on a regular [Download](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/ForStandardRender.unitypackage)
 
 
-
-See the troubleshooting topics if you encounter any problems.
-
 # What's new:
 1. The structure of the code has been completely changed, something is simplified, something remains as it is.
 2. ```MidiMaster``` has now been changed to ```InputMIDI```, you no longer need to add the MidiJack namespace. ```InputMIDI``` Added to the namespace in the UnityEngine so that it will appear next to ```Input```.
-3. Added a couple more APIs
-4. The MIDI Monitor window has been completely redesigned. ![](view.gif)
+3. the ```MidiJack``` namespace has been changed to ```UnityEngine.MIDIJackEngine```, now other classes are there besides InputMIDI.
+4. Added a couple more APIs.
+5. The MIDI Monitor window has been completely redesigned. ![](view.gif)
 
 
-# API Reference
+# API Reference:
 The basic functions of MIDI Jack Engine are provided in the InputMIDI class.
 
 The channel arguments in the following functions can be omitted. In that case, the functions return the values in the All-Channel slot, which stores mixed status of all active channels.
