@@ -21,6 +21,12 @@ Since I do not have a Mac, and I have no way to update the libraries for the Mac
 Support for input from Android via USB
 Since I don't have a Midi keyboard, I used android instead for checks.
 
+# Connection via Android:
+1. Download app from Play Market: [Download](https://play.google.com/store/apps/details?id=com.dreamhoundstudios.keyboard)
+
+Resource/0.jpg
+
+
 # Examples:
 If your project is on Universal Render Pipeline [Download](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/ForUniversalRenderPipeline.unitypackage)
 
