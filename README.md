@@ -14,19 +14,6 @@ Download and import [MIDIJackEngine.unitypackage](https://github.com/ARtronClass
 
 if you have questions and suggestions for improvement, write to Issues.
 
-# Minuses:
-Since I do not have a Mac, and I have no way to update the libraries for the Mac and build it, so I had to cut out the support for the Mac, but if it appears, then in the next update I will add support.
-
-# Pros:
-Support for input from Android via USB
-Since I don't have a Midi keyboard, I used android instead for checks.
-
-# Connection via Android:
-1. Download app from Play Market: [Download](https://play.google.com/store/apps/details?id=com.dreamhoundstudios.keyboard)
-
-Resource/0.jpg
-
-
 # Examples:
 If your project is on Universal Render Pipeline [Download](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/ForUniversalRenderPipeline.unitypackage)
 
@@ -40,6 +27,33 @@ If your project is on a regular [Download](https://github.com/ARtronClassicStudi
 4. Added a couple more APIs.
 5. The MIDI Monitor window has been completely redesigned. ![](Resource/view.gif)
 
+
+# Minuses:
+Since I do not have a Mac, and I have no way to update the libraries for the Mac and build it, so I had to cut out the support for the Mac, but if it appears, then in the next update I will add support.
+
+# Pros:
+Support for input from Android via USB
+Since I don't have a Midi keyboard, I used android instead for checks.
+
+# Connection via Android:
+<details>
+<summary>Expand</summary>
+
+1. Download app from Play Market: [Download](https://play.google.com/store/apps/details?id=com.dreamhoundstudios.keyboard) 
+  If you see that this application has been deleted in the Play Market, then you can always download it [here](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/MIDI.Keyboard.apk)
+2. Press USB mode selection:
+
+![](Resource/0.jpg)
+
+3. In the settings USB turn on the MIDI:
+  
+![](Resource/1.jpg)
+  
+4. Go to the application and click on the output icon and select your device:
+ 
+![](Resource/3.jpg)
+ 
+</details>
 
 # API Reference:
 The basic functions of MIDI Jack Engine are provided in the InputMIDI class.
