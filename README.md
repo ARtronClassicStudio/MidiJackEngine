@@ -12,10 +12,14 @@ Only for Windows
 # Installation:
 Download and import [MIDIJackEngine.unitypackage](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/MIDIJackEngine.unitypackage) into your project.
 
-if you have any questions, write to Issues.
+if you have questions and suggestions for improvement, write to Issues.
 
 # Minuses:
 Since I do not have a Mac, and I have no way to update the libraries for the Mac and build it, so I had to cut out the support for the Mac, but if it appears, then in the next update I will add support.
+
+# Pros:
+Support for input from Android via USB
+Since I don't have a Midi keyboard, I used android instead for checks.
 
 # Examples:
 If your project is on Universal Render Pipeline [Download](https://github.com/ARtronClassicStudio/MidiJackEngine/releases/download/2021V/ForUniversalRenderPipeline.unitypackage)
