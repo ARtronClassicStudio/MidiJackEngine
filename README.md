@@ -14,7 +14,7 @@ See the troubleshooting topics if you encounter any problems.
 1. The structure of the code has been completely changed, something is simplified, something remains as it is.
 2. ```MidiMaster``` has now been changed to ```InputMIDI```, you no longer need to add the MidiJack namespace. ```InputMIDI``` Added to the namespace in the UnityEngine so that it will appear next to ```Input```.
 3. Added a couple more APIs
-4. The MIDI Monitor window has been completely redesigned. 
+4. The MIDI Monitor window has been completely redesigned. ![](view.PNG)
 
 
 # API Reference
