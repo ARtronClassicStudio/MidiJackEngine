@@ -103,3 +103,100 @@ same as ```InputMIDI.GetKey()``` only for checks ```if```
 ```C#
 InputMIDI.GetKeyBool()
 ```
+
+# Examples:
+Usage: ```GetKeyBool()``` and ```InputMIDI.AnyKeyInt()```
+```C#
+    private void Update()
+    {
+        //Checking if any key is pressed
+        if (InputMIDI.GetKeyBool(InputMIDI.AnyKeyInt()))
+        {
+            Debug.Log(InputMIDI.AnyKeyInt());
+        }
+    }
+```
+Usage: ```GetKnob()```
+```C#
+        public int knobNumber;
+
+        void Awake()
+        {
+            transform.localScale = Vector3.zero;
+        }
+
+        void Update()
+        {
+            var s = InputMIDI.GetKnob(knobNumber);
+            transform.localScale = new Vector3(1, s, 1);
+        }
+    
+```
+Usage: ```KnobIndicator```
+```C#
+        public GameObject prefab;
+
+        List<KnobIndicator> indicators;
+
+        void Start()
+        {
+            indicators = new List<KnobIndicator>();
+        }
+
+        void Update()
+        {
+            var channels = InputMIDI.GetKnobNumbers();
+
+            // If a new chennel was added...
+            if (indicators.Count != channels.Length)
+            {
+                // Instantiate the new indicator.
+                var go = Instantiate(prefab);
+                go.transform.position = Vector3.right * indicators.Count;
+
+                // Initialize the indicator.
+                var indicator = go.GetComponent<KnobIndicator>();
+                indicator.knobNumber = channels[indicators.Count];
+
+                // Add it to the indicator list.
+                indicators.Add(indicator);
+            }
+        }
+```
+Usage Delegate:
+
+```C#
+        //The delegate is called if a key was pressed
+        void NoteOn(MidiChannel channel, int note, float velocity)
+        {
+            Debug.Log("NoteOn: " + channel + "," + note + "," + velocity);
+        }
+        //The delegate is called if a key has been released
+        void NoteOff(MidiChannel channel, int note)
+        {
+            Debug.Log("NoteOff: " + channel + "," + note);
+        }
+        //The delegate is called if the handle has been scrolled
+        void Knob(MidiChannel channel, int knobNumber, float knobValue)
+        {
+            Debug.Log("Knob: " + knobNumber + "," + knobValue);
+        }
+
+        //Activating delegates when enabled
+        void OnEnable()
+        {
+        
+            InputMIDI.NoteOnDelegate += NoteOn;
+            InputMIDI.NoteOffDelegate += NoteOff;
+            InputMIDI.KnobDelegate += Knob;
+        }
+
+        //Deactivating delegates when enabled
+        void OnDisable()
+        {
+            InputMIDI.NoteOnDelegate -= NoteOn;
+            InputMIDI.NoteOffDelegate -= NoteOff;
+            InputMIDI.KnobDelegate -= Knob;
+        }
+ ```
+The examples were taken from resource packs.
