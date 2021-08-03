@@ -219,7 +219,7 @@ namespace UnityEngine.MIDIJackEngine
             GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),Resources.Load("g")as Texture2D,ScaleMode.StretchToFill);
             var endpointCount = EngineCountEndpoints();
 
-            // Endpoints
+           
             var temp = "Detected MIDI devices:";
             for (var i = 0; i < endpointCount; i++)
             {
@@ -240,14 +240,7 @@ namespace UnityEngine.MIDIJackEngine
             EditorGUILayout.HelpBox(old, MessageType.Info, true);
             GUILayout.EndHorizontal();
 
-            // Message history
-            //temp = "Recent MIDI messages:";
-           // foreach (var message in MIDIDriverEngine.Instance.History)
-           // {
-               // temp = "Note:" + message.data1.ToString();
-            InputMIDI.NoteOnDelegate+=NoteOn;
-            InputMIDI.NoteOffDelegate += NoteOff;
-           // }
+          
 
 
              GUILayout.Label(tempKey);
